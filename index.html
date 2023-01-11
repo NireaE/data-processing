@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/main-form.css">
   <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/forms.css">
  </head>
  <body>
      <header>
@@ -20,15 +20,68 @@
      </header>
      
    <main class="wrapper">
- 
     <h2 class="subheader">Place form code below:</h2>
-    <p>form goes here</p>
-    <h3>Page Origins</h3>
-    <p>The HTML/CSS comes from Sara Newman's Web Fundamentals class as taught at Seattle Central. This page provides a basis for students to build a responsive portal page.</p>
-    <p>The mobile navigation originates from <a href="https://www.w3schools.com/howto/howto_js_mobile_navbar.asp" target="_blank">W3Schools</a></p>
+   <form action="" method="get" class="main-form" >
+      <div>
+        <label for="FirstName">First Name </label><br>
+        <input  id="FirstName" type="text" name="FirstName" placeholder="First Name" required autofocus> 
+      </div>
+      <div>
+        <label for="LastName">Last Name </label><br>
+        <input  id="LastName" type="text" name="LastName" placeholder="Last Name" required> 
+      </div>
+      <div>
+        <label for="Email">Email</label><br>
+        <input  id="Email" type="email" name="Email"      placeholder="Email" required > 
+      </div>
+      <div>
+        <label for="Address">Address </label><br>
+        <input id="Address" type="text" name="Address" placeholder="Address" required> 
+      </div>
+
+      <div>
+        <label for="State">State </label><br>
+        <select name="State" id="State" required>
+          <option value="">Please select a state</option>
+          <option value="AK">Alaska</option>
+          <option value="CA">California</option>
+          <option value="OR">Oregon</option>
+          <option value="WA">Washington</option>
+        </select>
+      </div>
+      
+      <div>
+        <fieldset>
+          <legend>Would you like to join our mailing list?</legend>
+          <label><input type="radio" name="JoinMailingList" value="Yes" required> Yes</label><br>
+          <label><input type="radio" name="JoinMailingList" value="No"> No</label>
+        </fieldset>
+      </div>
+
+      <div>
+        <fieldset>
+          <legend>Interested In?</legend>
+          <label><input type="checkbox" name="InterestedIn" value="Website"> Website</label><br>
+          <label><input type="checkbox" name="InterestedIn" value="OnlineCalendar"> Online Calendar</label><br>
+          <label><input type="checkbox" name="InterestedIn" value="ContactForm"> Contact Form</label><br>
+          <label><input type="checkbox" name="InterestedIn" value="ComplimentaryLolilops"> Complimentary Lolilops</label>
+        </fieldset>
+      </div>
+      
+      <div>
+        <label for="Comments">Comments</label><br>
+        <textarea name="Comments" id="Comments" cols="36" rows="4"></textarea>
+      </div>
+
+      <div>
+        <input type="submit" value="Submit it!">
+
+      </div>  
+    </form>
+   
     <footer>
       <p><small>&copy; 2021-<span id="this-year"></span> by 
-          YOUR NAME HERE, All Rights Reserved ~ 
+          Elias Nirea, All Rights Reserved ~ 
           <a id="html-checker" href="#" target="_blank">Check HTML</a> ~ 
           <a id="css-checker" href="#" target="_blank">Check CSS</a></small>
      </p>
